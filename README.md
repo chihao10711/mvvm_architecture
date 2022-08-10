@@ -4,7 +4,7 @@ A Flutter MVVM (Model-View-ViewModel) implementation. It uses property-based dat
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm/flutter_mvvm.dart';
+import 'package:mvvm_architecture/mvvm_architecture.dart';
 
 import 'my_home_page.dart';
 
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm/flutter_mvvm.dart';
+import 'package:mvvm_architecture/mvvm_architecture.dart';
 
 part 'my_home_vm.dart';
 

@@ -1,7 +1,7 @@
-name: flutter_mvvm
-description: A new Flutter package project.
+name: mvvm_architecture
+description: The goal behind is to move as much of the state and logic from the ViewState into a separate entity called the ViewModel.
 version: 0.0.1
-homepage:
+homepage: https://github.com/chihao10711/mvvm_architecture.git
 
 environment:
   sdk: ">=2.17.6 <3.0.0"

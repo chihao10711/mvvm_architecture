@@ -1,4 +1,4 @@
-package com.haolc.flutter_mvvm_example
+package com.haolc.mvvm_architecture_example
 
 import io.flutter.embedding.android.FlutterActivity
 

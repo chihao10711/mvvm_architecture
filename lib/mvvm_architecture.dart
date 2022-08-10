@@ -1,4 +1,4 @@
-library flutter_mvvm;
+library mvvm_architecture;
 
 import 'dart:developer' as dev;
 

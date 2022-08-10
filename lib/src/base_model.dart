@@ -1,4 +1,4 @@
-part of flutter_mvvm;
+part of mvvm_architecture;
 
 abstract class ViewModel<V extends State> {
   final V _viewState;

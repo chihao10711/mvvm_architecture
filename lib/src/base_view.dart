@@ -1,4 +1,4 @@
-part of flutter_mvvm;
+part of mvvm_architecture;
 
 final RouteObserver<ModalRoute<void>> routeObserver =
     RouteObserver<ModalRoute<void>>();
