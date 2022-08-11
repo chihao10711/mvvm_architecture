@@ -9,7 +9,7 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
 
   VM get viewModel => _viewModel;
 
-  String get _sanitizedRoutePageName {
+  String get _routePageName {
     return '$runtimeType'.replaceAll('_', '').replaceAll('State', '');
   }
 
@@ -22,6 +22,7 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
     _viewModel = createViewModel();
     logger('Created $runtimeType.');
     viewModel.init();
+
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       viewModel.onReady();
     });
@@ -31,7 +32,6 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-
     // subscribe for the change of route
     ModalRoute<Object?>? modalRoute = ModalRoute.of(context);
     if (ModalRoute.of(context) != null && modalRoute is PageRoute) {
@@ -44,7 +44,7 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
   @mustCallSuper
   @override
   void didPopNext() {
-    logger('🚚 $_sanitizedRoutePageName didPopNext');
+    logger('🚚 $_routePageName didPopNext');
     viewModel.routingDidPopNext();
   }
 
@@ -52,7 +52,7 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
   @mustCallSuper
   @override
   void didPush() {
-    logger('🚚 $_sanitizedRoutePageName didPush');
+    logger('🚚 $_routePageName didPush');
     viewModel.routingDidPush();
   }
 
@@ -60,7 +60,7 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
   @mustCallSuper
   @override
   void didPop() {
-    logger('🚚 $_sanitizedRoutePageName didPop');
+    logger('🚚 $_routePageName didPop');
     viewModel.routingDidPop();
   }
 
@@ -69,7 +69,7 @@ abstract class ViewState<V extends StatefulWidget, VM extends ViewModel>
   @mustCallSuper
   @override
   void didPushNext() {
-    logger('🚚 $_sanitizedRoutePageName didPushNext');
+    logger('🚚 $_routePageName didPushNext');
     viewModel.routingDidPushNext();
   }
 
